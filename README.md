@@ -2,6 +2,8 @@
 A **starter project** to show how to set up and use automated testing in Python
 
 ![Tests](https://github.com/tobibias/starter-project/actions/workflows/tests.yml/badge.svg)
+![PyPi_Version](https://img.shields.io/pypi/v/lckr-jupyterlab-variableinspector)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
