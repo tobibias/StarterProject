@@ -1,7 +1,7 @@
 # Example StarterProject
 A **starter project** to show how to set up and use automated testing in Python
 
-Change package_name = example to your needs. The rest of the README ist just
+Change package_name = example to your needs. The rest of the README just
 serves as an example.
 
 ![Tests](https://github.com/tobibias/starter-project/actions/workflows/tests.yml/badge.svg)
