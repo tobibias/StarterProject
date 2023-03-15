@@ -1,9 +1,6 @@
 # Example StarterProject
 A **starter project** to show how to set up and use automated testing in Python
 
-Change package_name = example to your needs. The rest of the README just
-serves as an example.
-
 ![Tests](https://github.com/tobibias/starter-project/actions/workflows/tests.yml/badge.svg)
 ![PyPi_Version](https://img.shields.io/pypi/v/lckr-jupyterlab-variableinspector)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -32,7 +29,7 @@ class="center">
 ## Installation
 
 ```
-pip install example
+pip install mypackage
 ```
 
 ## Development

@@ -34,10 +34,10 @@ Typical usage example:
 """
 from typing import List, Optional
 
-import requests #type: ignore # pylint: disable=W0611
+import requests  #type: ignore # pylint: disable=W0611
 
 
-class SampleClass:
+class MyClass:
     """Summary of class here.
 
     Longer class information...

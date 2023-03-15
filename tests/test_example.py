@@ -1,5 +1,5 @@
 import pytest
-from example import example
+from mypackage import mymodule
 
 
 @pytest.fixture
@@ -15,12 +15,12 @@ def doc_string() -> str:
 
 
 def test_from_string(doc_string):
-    ex = example.SampleClass()
+    ex = mymodule.MyClass()
     assert ex.public_method(word=doc_string) is "Hello World!"
 
 
 def test_sample_class():
-    ex = example.SampleClass()
+    ex = mymodule.MyClass()
     assert ex.public_method() is "wuff"
 
 
@@ -34,13 +34,13 @@ def test_sample_class():
 ])
 # Single test function using multiple test cases.
 def test_multi_publics(test_input, expected):
-    ex = example.SampleClass()
+    ex = mymodule.MyClass()
     assert ex.public_method(word=test_input) is expected
 
 
 @pytest.mark.skip(reason="regexes not supported yet")
 def test_regex_slaps():
-    ex = example.SampleClass()
+    ex = mymodule.MyClass()
     assert ex.public_method(word='[ld]*ddl') is ""
 
 
@@ -51,7 +51,7 @@ def test_divide_by_zero():
 
 #def test_invalid_slap():
 #    with pytest.raises(ValueError):
-#        ex = example.SampleClass()
+#        ex = mymodule.MyClass()
 #        ex.public_method() ...
 
 
