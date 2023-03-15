@@ -19,7 +19,7 @@ def test_from_string(doc_string):
     assert ex.public_method(word=doc_string) is "Hello World!"
 
 
-def test_sample_class():
+def test_my_class():
     ex = mymodule.MyClass()
     assert ex.public_method() is "wuff"
 
