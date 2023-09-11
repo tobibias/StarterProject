@@ -1,4 +1,4 @@
-name: Pytest
+name: Pytest & Pylint & Mypy
 on: [push]
 
 jobs:
@@ -25,3 +25,9 @@ jobs:
 
       - name: Run tests
         run: poetry run pytest
+
+      - name: Run tests
+        run: poetry run pylint src
+
+      - name: Run tests
+        run: poetry run mypy src
