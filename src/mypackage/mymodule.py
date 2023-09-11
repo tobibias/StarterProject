@@ -34,7 +34,7 @@ Typical usage example:
 """
 from typing import List, Optional
 
-import requests  #type: ignore # pylint: disable=W0611
+import requests  # type: ignore # pylint: disable=W0611
 
 
 class MyClass:
@@ -62,10 +62,11 @@ class MyClass:
         pass
 
     def public_method(
-            self,
-            word: str = "wuff",
-            exclude: Optional[List[str]] = None,
-            include_word: bool = False) -> str:  # pylint: disable=W0613
+        self,
+        word: str = "wuff",
+        exclude: Optional[List[str]] = None,
+        include_word: bool = False,
+    ) -> str:  # pylint: disable=W0613
         """Summary of method here.
 
         Longer method information...

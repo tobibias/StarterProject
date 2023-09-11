@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2022 Tobias Höfer
+# Copyright (c) 2023 Tobias Höfer
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,4 +20,40 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 # ==============================================================================
-"""API"""
+"""CLI python script.
+
+Leave one blank line.  The rest of this docstring should contain an
+overall description of the module or program.  Optionally, it may also
+contain a brief description of exported classes and functions and/or usage
+examples.
+
+Typical usage example:
+
+  python run.py
+  poetry run python run.py
+"""
+import argparse
+import logging
+
+from src.mypackage.mymodule import MyClass
+from src.mypackage.utils.general import colorstr
+
+
+def main(opt):
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
+    logger = logging.getLogger(__name__)
+    myclass = MyClass()
+    logger.info(colorstr(myclass.public_method(opt.word)))
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--word", type=str, default="wuff", help="example string to logg."
+    )
+    opt = parser.parse_args()
+    main(opt)

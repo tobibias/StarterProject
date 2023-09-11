@@ -1,5 +1,5 @@
 import pytest
-from mypackage import mymodule
+from src.mypackage import mymodule
 
 
 @pytest.fixture
@@ -26,12 +26,15 @@ def test_my_class():
 
 # Run multiple test without even when the first tests fail.
 # Specify test cases and use them in a single test funciton.
-@pytest.mark.parametrize("test_input, expected", [
-    ("Hi", "Hi"),
-    ("HI", "HI"),
-    ("", ""),
-    ("Test case c", "Test case c"),
-])
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        ("Hi", "Hi"),
+        ("HI", "HI"),
+        ("", ""),
+        ("Test case c", "Test case c"),
+    ],
+)
 # Single test function using multiple test cases.
 def test_multi_publics(test_input, expected):
     ex = mymodule.MyClass()
@@ -41,7 +44,7 @@ def test_multi_publics(test_input, expected):
 @pytest.mark.skip(reason="regexes not supported yet")
 def test_regex_slaps():
     ex = mymodule.MyClass()
-    assert ex.public_method(word='[ld]*ddl') is ""
+    assert ex.public_method(word="[ld]*ddl") is ""
 
 
 @pytest.mark.xfail
@@ -49,7 +52,7 @@ def test_divide_by_zero():
     assert 1 / 0 == 1
 
 
-#def test_invalid_slap():
+# def test_invalid_slap():
 #    with pytest.raises(ValueError):
 #        ex = mymodule.MyClass()
 #        ex.public_method() ...
