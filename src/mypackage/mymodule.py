@@ -34,7 +34,7 @@ Typical usage example:
 """
 from typing import List, Optional
 
-import requests  # type: ignore # pylint: disable=W0611
+#import requests  # type: ignore # pylint: disable=W0611
 
 
 class MyClass:
