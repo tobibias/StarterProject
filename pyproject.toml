@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "starter-project"
-version = "1.1.0"
+version = "0.0.0"
 description = "Python initial project template."
 authors = ["tobibias <tobias.hoefer.hm@gmail.com>"]
 license = "MIT"
@@ -8,6 +8,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+
+[tool.poetry.group.dev]
+optional = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
